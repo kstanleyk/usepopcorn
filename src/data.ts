@@ -1,4 +1,7 @@
-export const tempMovieData = [
+import { IMovie } from "./models/movie.model";
+
+
+export const tempMovieData: IMovie[] = [
     {
       imdbID: "tt1375666",
       Title: "Inception",
@@ -22,7 +25,7 @@ export const tempMovieData = [
     },
   ];
   
-  export const tempWatchedData = [
+  export const tempWatchedData: IMovie[] = [
     {
       imdbID: "tt1375666",
       Title: "Inception",
@@ -44,4 +47,13 @@ export const tempMovieData = [
       userRating: 9,
     },
   ];
+
+  export const average = (arr: (number | undefined)[]): number | undefined => {
+    const filteredArr = arr.map((num) => num ?? 0);
   
+    if (filteredArr.length === 0) {
+      return undefined; // Return undefined for an empty array
+    }
+  
+    return filteredArr.reduce((acc, cur) => acc + cur, 0) / filteredArr.length;
+  };
