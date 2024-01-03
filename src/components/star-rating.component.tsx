@@ -15,7 +15,7 @@ interface StarRatingProps {
   defaultRating?: number;
   color?: string;
   size?: number;
-  onSetRating?: (n: number) => void;
+  onSetRating?: (rating: number) => void;
 }
 
 export default function StarRating({
