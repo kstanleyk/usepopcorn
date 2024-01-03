@@ -1,13 +1,7 @@
-import Logo from "./logo.component";
-import NumResults from "./num-results.component";
-import Search from "./search.component";
+interface Props {
+  children: React.ReactNode;
+}
 
-export default function Navbar() {
-  return (
-    <nav className="nav-bar">
-      <Logo />
-      <Search />
-      <NumResults />
-    </nav>
-  );
+export default function Navbar({ children }: Props) {
+  return <nav className="nav-bar">{children}</nav>;
 }
