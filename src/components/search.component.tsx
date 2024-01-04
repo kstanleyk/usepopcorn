@@ -1,7 +1,11 @@
-import { useState } from "react";
 
-export default function Search() {
-  const [query, setQuery] = useState("");
+interface Props {
+  query: string;
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function Search({query, setQuery}: Props) {
+  
   return (
     <input
       className="search"
